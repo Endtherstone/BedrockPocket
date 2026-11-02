@@ -30,9 +30,9 @@ BedrockPocket เป็นแอป Android สำหรับทดลองต
 
 ## Download / ดาวน์โหลด
 
-Download the latest test APK: [BedrockPocket 0.8.43](releases/BedrockPocket-0.8.43.apk). This APK is signed with a local Android debug key and is provided for testing, not as a production Play Store release.
+Download the latest test APK from the [BedrockPocket 0.8.43 release](https://github.com/Endtherstone/BedrockPocket/releases/tag/v0.8.43). This APK is signed with a local Android debug key and is provided for testing, not as a production Play Store release.
 
-ดาวน์โหลด APK รุ่นทดสอบล่าสุด: [BedrockPocket 0.8.43](releases/BedrockPocket-0.8.43.apk) ไฟล์นี้เซ็นด้วย debug key สำหรับทดสอบ ยังไม่ใช่รุ่นสำหรับเผยแพร่บน Play Store
+ดาวน์โหลด APK รุ่นทดสอบล่าสุดได้ที่หน้า [BedrockPocket 0.8.43 Release](https://github.com/Endtherstone/BedrockPocket/releases/tag/v0.8.43) ไฟล์นี้เซ็นด้วย debug key สำหรับทดสอบ ยังไม่ใช่รุ่นสำหรับเผยแพร่บน Play Store
 
 ## Runtime design
 

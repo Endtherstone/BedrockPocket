@@ -1,0 +1,39 @@
+name: Publish APK release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create prerelease and upload APK
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG_NAME: ${{ github.ref_name }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          version="${TAG_NAME#v}"
+          asset="releases/BedrockPocket-${version}.apk"
+          test -s "$asset"
+
+          cat > release-notes.txt <<NOTES
+          BedrockPocket ${version} test build.
+
+          The APK is signed with a local Android debug key. It is for testing and is not a production Play Store release. See the README for known limitations and device compatibility notes.
+          NOTES
+
+          gh release create "$TAG_NAME" "$asset#BedrockPocket ${version} APK" \
+            --repo "$REPOSITORY" \
+            --title "BedrockPocket ${version}" \
+            --notes-file release-notes.txt \
+            --prerelease \
+            --verify-tag
