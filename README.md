@@ -2,6 +2,32 @@
 
 BedrockPocket runs **Mojang's official Bedrock Dedicated Server (BDS)** on an ARM64 phone through Ubuntu, PRoot, and Box64. It does not use Altay or PocketMine. The current app version is 0.8.43.
 
+## คำอธิบาย (ภาษาไทย)
+
+BedrockPocket เป็นแอป Android สำหรับทดลองติดตั้งและควบคุม Minecraft Bedrock Dedicated Server (BDS) บนมือถือ ARM64 โดยใช้ Ubuntu, PRoot และ Box64 ภายในพื้นที่ของแอป มีหน้าแสดงสถานะ Console จัดการโลกและแอดออน รวมถึงตัววัด TPS ที่ฝังมากับแอป
+
+**ข้อจำกัดและสถานะที่ยังใช้ไม่ได้หรือยังยืนยันไม่ได้**
+
+- การรัน BDS บน Android เป็นวิธีทดลองที่ Mojang ไม่ได้รับรอง และเครื่อง Android 32-bit ไม่รองรับ
+- บน Samsung SM-G935K (Android API 26) ที่ทดสอบ BDS เปิดด้วย `online-mode=true` และเริ่มสร้างโลกได้ แต่เชื่อมต่อ Minecraft services ไม่สำเร็จ จึงหยุดก่อนรับผู้เล่น การเข้าเล่นแบบตรวจสอบบัญชีจึงยังใช้ไม่ได้บนเครื่องทดสอบนี้
+- แอปยังไม่รองรับการเปิด BDS หลายโปรเซสพร้อมกัน; เปิดได้ครั้งละหนึ่งโปรไฟล์
+- ยังไม่มีระบบซิงก์ Google Drive API หรือสำรองขึ้นคลาวด์ตามเวลา; ขณะนี้เลือกส่งออกไฟล์ผ่าน Android Document Picker ได้
+- Playit, LAN Dashboard, สำรองตามเวลา, การแยกหลายโปรไฟล์ และการแสดงค่า TPS จริงยังไม่ได้ยืนยันการทำงานครบวงจร
+- การทำงานเบื้องหลังขึ้นกับการจัดการแบตเตอรี่และข้อจำกัดของ Android ในแต่ละเครื่อง
+
+## Description (English)
+
+BedrockPocket is an experimental Android app for setting up and controlling Minecraft Bedrock Dedicated Server (BDS) on ARM64 phones. It uses Ubuntu, PRoot, and Box64 in app-private storage and includes server status, Console, world and add-on management, and an embedded TPS monitor.
+
+**Limitations and unavailable or unverified features**
+
+- Running BDS on Android is experimental and is not officially supported by Mojang. 32-bit Android devices are unsupported.
+- On the tested Samsung SM-G935K (Android API 26), BDS started with `online-mode=true` and began creating a world, but could not connect to Minecraft services and stopped before accepting players. Authenticated player access is therefore unavailable on this test device.
+- Multiple BDS processes are not supported; only one server profile can run at a time.
+- Google Drive API sync and scheduled cloud backups are not implemented. Backups can currently be exported through Android's Document Picker.
+- Playit, the LAN Dashboard, scheduled backups, multi-profile isolation, and live TPS readings have not been fully verified end to end.
+- Background operation depends on Android's battery management and device-specific restrictions.
+
 ## Runtime design
 
 Mojang's Linux BDS binary is x86_64 and requires Ubuntu 22.04 LTS or later. The app prepares an Ubuntu 26.04.1 ARM64 userspace, uses PRoot for Android, installs Box64 and the x86_64 runtime libraries from Ubuntu's package archive, then starts the official BDS binary through Box64. All runtime files stay in app-private storage; Termux is not required.
