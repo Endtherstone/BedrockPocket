@@ -1,0 +1,25 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "BedrockPocket TPS Monitor",
+    "description": "Lightweight server tick-rate measurement for BedrockPocket",
+    "uuid": "5b2a0e17-2ac7-4ec8-9b29-712ba8bce23d",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 20, 0]
+  },
+  "modules": [
+    {
+      "type": "script",
+      "language": "javascript",
+      "uuid": "e29249c4-7355-4b20-9bcb-6ed94a88c7ab",
+      "version": [1, 0, 0],
+      "entry": "scripts/main.js"
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "1.1.0"
+    }
+  ]
+}

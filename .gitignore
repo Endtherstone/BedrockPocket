@@ -1,0 +1,14 @@
+/.gradle/
+/.gradle-home/
+/.gradle-local/
+/build/
+/app/build/
+/local.properties
+/.idea/
+*.iml
+/runtime-downloads/
+/.temp/
+*.jks
+*.keystore
+*.apk
+*.idsig

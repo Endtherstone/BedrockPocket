@@ -1,0 +1,13 @@
+Third-party runtime notices
+
+PRoot Android
+Source: https://github.com/green-green-avk/build-proot-android
+License: MIT
+The full license text is in PROOT_LICENSE.
+
+Apache Commons Compress 1.28.0
+Apache Commons IO 2.20.0
+Apache Commons Lang 3.17.0
+Source: https://commons.apache.org/
+License: Apache License 2.0
+The license text is available at https://www.apache.org/licenses/LICENSE-2.0
