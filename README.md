@@ -49,6 +49,14 @@ The app keeps existing server files as the default profile and supports addition
 - PRoot: Android ARM64 build from the public `green-green-avk/build-proot-android` source project; the archive is bundled in the app and its MIT license is included in assets.
 - Box64 and x86_64 system libraries: installed from the Ubuntu 26.04 package archive using Ubuntu's signed APT metadata.
 
+## License
+
+Unless a file says otherwise, the original BedrockPocket app source and documentation are licensed under the MIT License. Bundled third-party components retain their own licenses; see `app/src/main/assets/THIRD_PARTY_NOTICES.txt` and `PROOT_LICENSE`. This license does not grant rights to Minecraft/BDS or Mojang/Microsoft names and trademarks. BDS is downloaded from Mojang at runtime and remains subject to Mojang's EULA.
+
+## สัญญาอนุญาต
+
+เว้นแต่ไฟล์ใดจะระบุไว้เป็นอย่างอื่น ซอร์สและเอกสารต้นฉบับของ BedrockPocket ใช้สัญญาอนุญาต MIT ส่วนส่วนประกอบจากบุคคลที่สามยังใช้สัญญาอนุญาตของตนเอง ดู `app/src/main/assets/THIRD_PARTY_NOTICES.txt` และ `PROOT_LICENSE` สัญญานี้ไม่ให้สิทธิ์ใน Minecraft/BDS หรือชื่อและเครื่องหมายการค้าของ Mojang/Microsoft ตัวแอปดาวน์โหลด BDS จาก Mojang ขณะติดตั้ง และยังอยู่ภายใต้ EULA ของ Mojang
+
 ## Build
 
 Open the project in Android Studio with Android SDK Platform 35, Build Tools 35.0.0, and JDK 17 or newer. Build the debug APK with:
