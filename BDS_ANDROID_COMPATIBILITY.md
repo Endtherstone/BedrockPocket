@@ -21,7 +21,7 @@ Mojang's [BDS download page](https://www.minecraft.net/en-us/download/server/bed
 
 The Ubuntu ARM64 base was downloaded from Canonical and matched its published SHA-256 `5a1906794ced63a71a8119c3f211ef5f0bbe0a243001b4bbd41fdf80c5b219fd`. The bundled PRoot archive was checked as an ARM64 Android build. Its SHA-256 is `9629eb30cdf86e95c6ba681f8ab89c6fdaa9eca093d5577163513c99af5ca281`.
 
-Tested on Samsung SM-G935K (Android API 26, ARM64). Ubuntu/Box64 setup completed. BDS 1.26.61.1 launched with `online-mode=true`, created the world and logged `Accepting clients on [::]:19132`, then signed in to the signaling service. It later logged `Could not connect to Minecraft services. This is required to accept connections in online mode.` and stopped. Thus process launch and initial port bind were observed, but the server did not become available for secure-mode players. Compatibility through Box64/PRoot remains experimental; a successful process launch does not establish player connectivity.
+Tested on an ARM64 Android API 26 device. Ubuntu/Box64 setup completed. BDS 1.26.61.1 launched with `online-mode=true`, created the world and logged `Accepting clients on [::]:19132`, then signed in to the signaling service. It later logged `Could not connect to Minecraft services. This is required to accept connections in online mode.` and stopped. Thus process launch and initial port bind were observed, but the server did not become available for secure-mode players. Compatibility through Box64/PRoot remains experimental; a successful process launch does not establish player connectivity.
 
 ## Next validation step
 

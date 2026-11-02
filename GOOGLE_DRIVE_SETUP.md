@@ -7,13 +7,7 @@ To prepare the Google Cloud project for a future direct integration:
 1. In Google Cloud Console, create or select a project and enable **Google Drive API**.
 2. Configure the OAuth consent screen. For personal testing, use the testing audience and add the Google account that will test the app as a test user.
 3. Add only the `https://www.googleapis.com/auth/drive.file` scope. This is the narrow per-file scope intended for files created by the app or explicitly shared with it.
-4. Create an OAuth client ID of type **Android** with package `dev.codex.bedrockpocket` and SHA-1 fingerprint:
-
-   ```text
-   0B:2A:A3:BE:61:62:C5:BA:CE:BC:AD:86:D9:6D:8F:9F:C2:B5:42:18
-   ```
-
-   This fingerprint is from the locally signed test APK `BedrockPocket-0.8.36.apk`. A production APK signed with a different key needs a different Android OAuth client fingerprint.
+4. Create an OAuth client ID of type **Android** with package `dev.codex.bedrockpocket` and the SHA-1 fingerprint of the signing key you use. Get this fingerprint from your own Android signing configuration; do not reuse a debug-key fingerprint from someone else's build. A production APK signed with a different key needs a matching Android OAuth client fingerprint.
 
 5. Copy the generated OAuth client ID (the value ending in `.apps.googleusercontent.com`) for the later app integration. Do not send a client secret; Android OAuth clients do not use an embedded client secret.
 

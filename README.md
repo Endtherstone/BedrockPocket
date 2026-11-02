@@ -2,19 +2,6 @@
 
 BedrockPocket runs **Mojang's official Bedrock Dedicated Server (BDS)** on an ARM64 phone through Ubuntu, PRoot, and Box64. It does not use Altay or PocketMine. The current app version is 0.8.43.
 
-## คำอธิบาย (ภาษาไทย)
-
-BedrockPocket เป็นแอป Android สำหรับทดลองติดตั้งและควบคุม Minecraft Bedrock Dedicated Server (BDS) บนมือถือ ARM64 โดยใช้ Ubuntu, PRoot และ Box64 ภายในพื้นที่ของแอป มีหน้าแสดงสถานะ Console จัดการโลกและแอดออน รวมถึงตัววัด TPS ที่ฝังมากับแอป
-
-**ข้อจำกัดและสถานะที่ยังใช้ไม่ได้หรือยังยืนยันไม่ได้**
-
-- การรัน BDS บน Android เป็นวิธีทดลองที่ Mojang ไม่ได้รับรอง และเครื่อง Android 32-bit ไม่รองรับ
-- บน Samsung SM-G935K (Android API 26) ที่ทดสอบ BDS เปิดด้วย `online-mode=true` และเริ่มสร้างโลกได้ แต่เชื่อมต่อ Minecraft services ไม่สำเร็จ จึงหยุดก่อนรับผู้เล่น การเข้าเล่นแบบตรวจสอบบัญชีจึงยังใช้ไม่ได้บนเครื่องทดสอบนี้
-- แอปยังไม่รองรับการเปิด BDS หลายโปรเซสพร้อมกัน; เปิดได้ครั้งละหนึ่งโปรไฟล์
-- ยังไม่มีระบบซิงก์ Google Drive API หรือสำรองขึ้นคลาวด์ตามเวลา; ขณะนี้เลือกส่งออกไฟล์ผ่าน Android Document Picker ได้
-- Playit, LAN Dashboard, สำรองตามเวลา, การแยกหลายโปรไฟล์ และการแสดงค่า TPS จริงยังไม่ได้ยืนยันการทำงานครบวงจร
-- การทำงานเบื้องหลังขึ้นกับการจัดการแบตเตอรี่และข้อจำกัดของ Android ในแต่ละเครื่อง
-
 ## Description (English)
 
 BedrockPocket is an experimental Android app for setting up and controlling Minecraft Bedrock Dedicated Server (BDS) on ARM64 phones. It uses Ubuntu, PRoot, and Box64 in app-private storage and includes server status, Console, world and add-on management, and an embedded TPS monitor.
@@ -22,11 +9,30 @@ BedrockPocket is an experimental Android app for setting up and controlling Mine
 **Limitations and unavailable or unverified features**
 
 - Running BDS on Android is experimental and is not officially supported by Mojang. 32-bit Android devices are unsupported.
-- On the tested Samsung SM-G935K (Android API 26), BDS started with `online-mode=true` and began creating a world, but could not connect to Minecraft services and stopped before accepting players. Authenticated player access is therefore unavailable on this test device.
+- On the tested ARM64 Android API 26 device, BDS started with `online-mode=true` and began creating a world, but could not connect to Minecraft services and stopped before accepting players. Authenticated player access is therefore unavailable on this test device.
 - Multiple BDS processes are not supported; only one server profile can run at a time.
 - Google Drive API sync and scheduled cloud backups are not implemented. Backups can currently be exported through Android's Document Picker.
 - Playit, the LAN Dashboard, scheduled backups, multi-profile isolation, and live TPS readings have not been fully verified end to end.
 - Background operation depends on Android's battery management and device-specific restrictions.
+
+## คำอธิบาย (ภาษาไทย)
+
+BedrockPocket เป็นแอป Android สำหรับทดลองติดตั้งและควบคุม Minecraft Bedrock Dedicated Server (BDS) บนมือถือ ARM64 โดยใช้ Ubuntu, PRoot และ Box64 ภายในพื้นที่ของแอป มีหน้าแสดงสถานะ Console จัดการโลกและแอดออน รวมถึงตัววัด TPS ที่ฝังมากับแอป
+
+**ข้อจำกัดและสถานะที่ยังใช้ไม่ได้หรือยังยืนยันไม่ได้**
+
+- การรัน BDS บน Android เป็นวิธีทดลองที่ Mojang ไม่ได้รับรอง และเครื่อง Android 32-bit ไม่รองรับ
+- บนอุปกรณ์ Android ARM64 API 26 ที่ทดสอบ BDS เปิดด้วย `online-mode=true` และเริ่มสร้างโลกได้ แต่เชื่อมต่อ Minecraft services ไม่สำเร็จ จึงหยุดก่อนรับผู้เล่น การเข้าเล่นแบบตรวจสอบบัญชีจึงยังใช้ไม่ได้บนเครื่องทดสอบนี้
+- แอปยังไม่รองรับการเปิด BDS หลายโปรเซสพร้อมกัน; เปิดได้ครั้งละหนึ่งโปรไฟล์
+- ยังไม่มีระบบซิงก์ Google Drive API หรือสำรองขึ้นคลาวด์ตามเวลา; ขณะนี้เลือกส่งออกไฟล์ผ่าน Android Document Picker ได้
+- Playit, LAN Dashboard, สำรองตามเวลา, การแยกหลายโปรไฟล์ และการแสดงค่า TPS จริงยังไม่ได้ยืนยันการทำงานครบวงจร
+- การทำงานเบื้องหลังขึ้นกับการจัดการแบตเตอรี่และข้อจำกัดของ Android ในแต่ละเครื่อง
+
+## Download / ดาวน์โหลด
+
+Download the latest test APK: [BedrockPocket 0.8.43](releases/BedrockPocket-0.8.43.apk). This APK is signed with a local Android debug key and is provided for testing, not as a production Play Store release.
+
+ดาวน์โหลด APK รุ่นทดสอบล่าสุด: [BedrockPocket 0.8.43](releases/BedrockPocket-0.8.43.apk) ไฟล์นี้เซ็นด้วย debug key สำหรับทดสอบ ยังไม่ใช่รุ่นสำหรับเผยแพร่บน Play Store
 
 ## Runtime design
 
@@ -51,6 +57,6 @@ Open the project in Android Studio with Android SDK Platform 35, Build Tools 35.
 
 ## Verification status
 
-The 0.8.43 APK was installed over the existing app on a Samsung SM-G935K (Android API 26). The TPS pack embedded in the APK was enabled for the current world and the app confirmed installation. On this device, BDS 1.26.61.1 launched with `online-mode=true`, created the world, bound port 19132, and signed in to the signaling service, but then failed to connect to Minecraft services and stopped before accepting players. Secure-mode player connectivity is therefore not verified on this device. Playit, scheduled backups, profile isolation, Google Drive API sync, and LAN Dashboard access are also not fully verified end to end.
+The 0.8.43 APK was installed over the existing app on an ARM64 Android API 26 device. The TPS pack embedded in the APK was enabled for the current world and the app confirmed installation. On this device, BDS 1.26.61.1 launched with `online-mode=true`, created the world, bound port 19132, and signed in to the signaling service, but then failed to connect to Minecraft services and stopped before accepting players. Secure-mode player connectivity is therefore not verified on this device. Playit, scheduled backups, profile isolation, Google Drive API sync, and LAN Dashboard access are also not fully verified end to end.
 
 Direct Google Drive API sync still needs an OAuth client configured for the app. The existing Android Document Picker can save a backup to a user-selected Drive provider but does not provide scheduled OAuth sync.
